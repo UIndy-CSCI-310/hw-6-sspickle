@@ -3,7 +3,7 @@
 	import CartDisplayRow from "../components/CartDisplayRow.svelte"
 	import CartDisplayTotal from "../components/CartDisplayTotal.svelte"
 	import CartEnterForm from "../components/CartEnterForm.svelte"
-
+	import {fade} from "svelte/transition"
 	import {cart} from "../lib/cartStore"
 
 	let cartList:ShoppingCartItem[] = [
@@ -18,15 +18,15 @@
 		cart.set(newList)
 	}
 
-	const onSubmit = (e:CustomEvent<CartDisplayRow>) => {
-		const newItem = e.detail as CartDisplayRow
-		const newList = [...$cart, newItem]
+	const onSubmit = (e:CustomEvent<ShoppingCartItem>) => {
+		const newItem = e.detail
+		const newList = [...$cart, newItem] as ShoppingCartItem[]
 		cart.set(newList)
 	}
 
 </script>
 
-<CartEnterForm on:submit={(e) => onSubmit(e)}/>
+<CartEnterForm on:submit={e => onSubmit(e)}/>
 
 <div class="shoppingCartDisplay">
 	{#each $cart as cartItem,i}
