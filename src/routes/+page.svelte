@@ -3,7 +3,6 @@
 	import CartDisplayRow from "../components/CartDisplayRow.svelte"
 	import CartDisplayTotal from "../components/CartDisplayTotal.svelte"
 	import CartEnterForm from "../components/CartEnterForm.svelte"
-	import {fade} from "svelte/transition"
 	import {cart} from "../lib/cartStore"
 
 	let cartList:ShoppingCartItem[] = [
