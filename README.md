@@ -1,4 +1,10 @@
-# Homework Project 6
+# Homework Project 6 (Example Solution)
+
+This is an example solutino for HW-6. You can find a walkthrough video [here](https://drive.google.com/open?id=1U5csZQ0mPoW7VpGcbZjC38Nj8jlgXnU0&authuser=spicklemire%40uindy.edu&usp=drive_fs) as well.
+
+-------------------------------------------------------------------------------------------
+
+## Original README
 
 This week we’re going to continue working in the [Svelte](https://svelte.dev) framwork.
 
